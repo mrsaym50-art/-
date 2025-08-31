@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вопросы для тебя ❤️</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Фон с анимацией -->
+        <div class="background">
+            <div class="floating-hearts">
+                <div class="heart">❤️</div>
+                <div class="heart">💕</div>
+                <div class="heart">💖</div>
+                <div class="heart">💗</div>
+                <div class="heart">💝</div>
+            </div>
+        </div>
+
+        <!-- Главный экран -->
+        <div class="screen active" id="welcome">
+            <div class="content">
+                <h1 class="title">Привет, красавица! 💖</h1>
+                <p class="subtitle">У меня есть несколько вопросов для тебя...</p>
+                <button class="btn start-btn" onclick="startQuestions()">Начать</button>
+            </div>
+        </div>
+
+        <!-- Вопрос 1 -->
+        <div class="screen" id="question1">
+            <div class="content">
+                <h2 class="question">Вопрос 1:</h2>
+                <p class="question-text">Ты меня любишь? 💕</p>
+                <div class="buttons">
+                    <button class="btn yes-btn" onclick="answerQuestion(1, 'yes')">Да ❤️</button>
+                    <button class="btn no-btn" onclick="answerQuestion(1, 'no')">Нет 💔</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Вопрос 2 -->
+        <div class="screen" id="question2">
+            <div class="content">
+                <h2 class="question">Вопрос 2:</h2>
+                <p class="question-text">Ты хочешь пожениться? 💍</p>
+                <div class="buttons">
+                    <button class="btn yes-btn" onclick="answerQuestion(2, 'yes')">Да 💒</button>
+                    <button class="btn no-btn" onclick="answerQuestion(2, 'no')">Нет 🚫</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Вопрос 3 -->
+        <div class="screen" id="question3">
+            <div class="content">
+                <h2 class="question">Вопрос 3:</h2>
+                <p class="question-text">Скинешь сиски? 👙</p>
+                <div class="buttons">
+                    <button class="btn yes-btn" onclick="answerQuestion(3, 'yes')">Да 🎉</button>
+                    <button class="btn no-btn" onclick="answerQuestion(3, 'no')">Нет 😅</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Ответы -->
+        <div class="screen" id="answer1-no">
+            <div class="content">
+                <h2 class="answer-title">😤</h2>
+                <p class="answer-text">Я щас тебе пизди дам!</p>
+                <button class="btn restart-btn" onclick="restart()">Начать заново</button>
+            </div>
+        </div>
+
+        <div class="screen" id="answer2-no">
+            <div class="content">
+                <h2 class="answer-title">😠</h2>
+                <p class="answer-text">Иди нафиг!</p>
+                <button class="btn restart-btn" onclick="restart()">Начать заново</button>
+            </div>
+        </div>
+
+        <div class="screen" id="answer3-yes">
+            <div class="content">
+                <h2 class="answer-title">🎉</h2>
+                <p class="answer-text">УРАААААААААААА!</p>
+                <button class="btn restart-btn" onclick="restart()">Начать заново</button>
+            </div>
+        </div>
+
+        <!-- Экран для "нет" на 3-м вопросе -->
+        <div class="screen" id="answer3-no">
+            <div class="content">
+                <h2 class="answer-title">😅</h2>
+                <p class="answer-text">Телепортация завершена!</p>
+                <button class="btn restart-btn" onclick="restart()">Начать заново</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
